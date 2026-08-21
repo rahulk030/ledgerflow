@@ -2,6 +2,12 @@
 
 A financial operations dashboard for reviewing transactions, reconciling exceptions, and maintaining an append-only audit trail. I built this project to demonstrate the kind of full-stack work that shows up in internal banking and operations platforms: dense data tables, deterministic business rules, API design, state management, observability, and deployment automation.
 
+## Live demo
+
+**[Open LedgerFlow →](https://rahulk030.github.io/ledgerflow/)**
+
+The public GitHub Pages version runs in a browser-only portfolio demo mode with representative transaction data, search/filtering, reconciliation actions, and recalculated dashboard metrics. The repository also contains the full ASP.NET Core/PostgreSQL implementation for local development.
+
 ## What it does
 
 - Presents transaction volume, settlement totals, exception counts, and reconciliation rate in one dashboard.
