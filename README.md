@@ -2,8 +2,6 @@
 
 A financial operations dashboard for reviewing transactions, reconciling exceptions, and maintaining an append-only audit trail. I built this project to demonstrate the kind of full-stack work that shows up in internal banking and operations platforms: dense data tables, deterministic business rules, API design, state management, observability, and deployment automation.
 
-![LedgerFlow dashboard](docs/screenshots/dashboard.png)
-
 ## What it does
 
 - Presents transaction volume, settlement totals, exception counts, and reconciliation rate in one dashboard.
@@ -44,7 +42,7 @@ The frontend keeps UI-only concerns in Vue components and cross-page state in Pi
 apps/web/                  Vue + TypeScript client
 services/api/              ASP.NET Core Web API
 services/api.tests/        xUnit tests for business rules
-docs/                      Architecture notes and screenshots
+docs/                      Architecture notes
 .github/workflows/         CI pipeline
 ```
 
