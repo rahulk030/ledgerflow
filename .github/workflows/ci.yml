@@ -1,0 +1,25 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: apps/web } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm install
+      - run: npm run typecheck
+      - run: npm run build
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '8.0.x' }
+      - run: dotnet restore services/api/LedgerFlow.Api.csproj
+      - run: dotnet build services/api/LedgerFlow.Api.csproj --no-restore --configuration Release
+      - run: dotnet test services/api.tests/LedgerFlow.Api.Tests.csproj --configuration Release
