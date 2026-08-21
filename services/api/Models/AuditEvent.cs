@@ -1,0 +1,1 @@
+namespace LedgerFlow.Api.Models;public sealed class AuditEvent{public long Id{get;set;}public required string EntityType{get;set;}public required string EntityId{get;set;}public required string Action{get;set;}public required string Detail{get;set;}public DateTimeOffset OccurredAt{get;set;}=DateTimeOffset.UtcNow;}
