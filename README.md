@@ -61,11 +61,10 @@ docker compose up -d db
 ```bash
 cd services/api
 dotnet restore
-dotnet ef database update
 dotnet run
 ```
 
-The API will be available at `http://localhost:5080` and Swagger at `/swagger` in Development.
+The API creates the demo schema/data on startup and will be available at `http://localhost:5080`. Swagger is available at `/swagger` in Development.
 
 ### 3. Start the web app
 
