@@ -1,2 +1,17 @@
-<script setup lang="ts">import{RouterLink,RouterView}from'vue-router'</script>
-<template><div class="shell"><aside class="sidebar"><div class="brand"><span>LF</span><strong>LedgerFlow</strong></div><nav><RouterLink to="/">Overview</RouterLink><RouterLink to="/transactions">Transactions</RouterLink></nav><div class="sidebar-note">Operations workspace<br><small>Environment: Demo</small></div></aside><main class="content"><RouterView/></main></div></template>
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router';
+</script>
+
+<template>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span>LF</span><strong>LedgerFlow</strong></div>
+      <nav>
+        <RouterLink to="/">Overview</RouterLink>
+        <RouterLink to="/transactions">Transactions</RouterLink>
+      </nav>
+      <div class="sidebar-note">Operations workspace<br><small>Environment: Demo</small></div>
+    </aside>
+    <main class="content"><RouterView /></main>
+  </div>
+</template>
